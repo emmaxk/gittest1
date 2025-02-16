@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Muteesa I Royal University</title>
+</head>
+<body>
+
+    <!-- Include Header -->
+    <div id="header"></div>
+
+    <br />
+
+    <!-- Include Banner -->
+    <div id="banner"></div>
+
+    <script>
+        // Load header and banner sections dynamically
+        function loadHTML(section, file) {
+            fetch(file)
+            .then(response => response.text())
+            .then(data => document.getElementById(section).innerHTML = data);
+        }
+
+        loadHTML("header", "sections/header.html");
+        loadHTML("banner", "sections/banner.html");
+    </script>
+
+</body>
+</html>
